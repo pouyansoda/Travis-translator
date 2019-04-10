@@ -1,0 +1,31 @@
+<script type="text/javascript">
+
+var httpRequest;
+
+function alertContents() {
+	if (httpRequest.readyState === XMLHttpRequest.DONE) {
+		if (httpRequest.status === 200) {
+			alert(httpRequest.responseText);
+		} else {
+			alert('There was a problem with the request.');
+		}
+	}
+}
+
+function makeTranslationRequest(json, token, handler) {
+	httpRequest = new XMLHttpRequest();
+	httpRequest.onreadystatechange = handler;
+	httpRequest.open('POST', 'http://127.0.0.1:8080/translate');
+	httpRequest.setRequestHeader('Content-Type', 'application/json');
+	httpRequest.setRequestHeader('Authorization', 'Bearer '+token);
+	httpRequest.send(json);
+}
+
+
+makeTranslationRequest(
+	'{"source_lang":"en","target_lang": "ti","phrase":"Hello, how are you?"}',
+	token,
+	alertContents
+);
+
+</script>

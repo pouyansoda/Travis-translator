@@ -1,0 +1,41 @@
+{
+  "development": {
+	"version": "1.0.0",
+	"storage": "store/development.db",
+	"dialect": "sqlite",
+	"pool": {
+		"max": 5,
+		"min": 0,
+		"idle": 10000
+	},
+	"define": {
+		"underscored": true
+	}
+  },
+  "test": {
+	"version": "1.0.0",
+	"storage": "store/test.db",
+	"dialect": "sqlite",
+	"pool": {
+		"max": 5,
+		"min": 0,
+		"idle": 10000
+	},
+	"define": {
+		"underscored": true
+	}
+  },
+  "production": {
+	"version": "1.0.0",
+	"storage": "store/production.db",
+	"dialect": "sqlite",
+	"pool": {
+		"max": 5,
+		"min": 0,
+		"idle": 10000
+	},
+	"define": {
+		"underscored": true
+	}
+  }
+}

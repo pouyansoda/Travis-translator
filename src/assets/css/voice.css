@@ -1,0 +1,14 @@
+.voiceIcon {
+    color: gray;
+    background-color: transparent;
+    width: 40px;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+}
+.voiceIcon:hover{
+    font-size: 30px;
+    color:silver;
+    cursor: pointer;
+    border:none;
+}
